@@ -3,28 +3,11 @@ import unittest
 
 def romanToInt(s):
     sum = 0
-
+    
+    letter_values = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+        
     def value(char):
-        if char == "I":
-            return 1
-
-        elif char == "V":
-            return 5
-
-        elif char == "X":
-            return 10
-
-        elif char == "L":
-            return 50
-
-        elif char == "C":
-            return 100
-
-        elif char == "D":
-            return 500
-
-        elif char == "M":
-            return 1000
+        return letter_values[char]
 
     def greater_then_next(current, current_index):  # Char Current-Index
         if current_index == len(s) - 1:
