@@ -17,47 +17,10 @@ def romanToInt(s):
             return value(current) >= value(s[current_index + 1])
 
     for i, char in enumerate(s):
-        if char == "I":
-            if greater_then_next(char, i):
-                sum += value(char)
-            else:
-                sum -= value(char)
-
-        elif char == "V":
-            if greater_then_next(char, i):
-                sum += value(char)
-            else:
-                sum -= value(char)
-
-        elif char == "X":
-            if greater_then_next(char, i):
-                sum += value(char)
-            else:
-                sum -= value(char)
-
-        elif char == "L":
-            if greater_then_next(char, i):
-                sum += value(char)
-            else:
-                sum -= value(char)
-
-        elif char == "C":
-            if greater_then_next(char, i):
-                sum += value(char)
-            else:
-                sum -= value(char)
-
-        elif char == "D":
-            if greater_then_next(char, i):
-                sum += value(char)
-            else:
-                sum -= value(char)
-
-        elif char == "M":
-            if greater_then_next(char, i):
-                sum += value(char)
-            else:
-                sum -= value(char)
+        if greater_then_next(char, i):
+            sum += value(char)
+        else:
+            sum -= value(char)
 
     return sum
 
