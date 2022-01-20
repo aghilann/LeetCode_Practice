@@ -1,0 +1,18 @@
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        
+        cur = head
+        visited = []
+        while cur:
+            if cur in visited:
+                return cur
+            visited.append(cur)
+            cur = cur.next
+        return None
+        # This is a acceptable solution but it runs in O(n), the best solution uses a double pointer technique ad doesn't need a visited array.
