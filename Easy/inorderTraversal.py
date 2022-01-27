@@ -21,6 +21,6 @@ class Solution:
         return arr
       
  """
-Runtime: 51 ms, faster than 18.30% of Python3 online submissions for Binary Tree Inorder Traversal.
+Runtime: 32 ms, faster than 74.35% of Python3 online submissions for Binary Tree Inorder Traversal.
 Memory Usage: 13.9 MB, less than 99.93% of Python3 online submissions for Binary Tree Inorder Traversal.
 """
