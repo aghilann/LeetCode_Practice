@@ -1,21 +1,19 @@
 # Definition for singly-linked list.
-# class ListNode(object):
+# class ListNode:
 #     def __init__(self, x):
 #         self.val = x
 #         self.next = None
 
-class Solution(object):
-    def hasCycle(self, head):
-        """
-        :type head: ListNode
-        :rtype: bool
-        """
-        visited = []
-        # In the optimal solution, a set is used instead of an array
-        cur = head
-        while cur != None:
-            if cur in visited:
+class Solution:
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+        
+        slow, fast = head, head
+    
+        while fast and fast.next:
+            fast = fast.next.next
+            slow = slow.next
+            
+            if fast == slow:
                 return True
-            visited.append(cur)
-            cur = cur.next
+        
         return False
