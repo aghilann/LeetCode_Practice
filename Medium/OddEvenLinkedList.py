@@ -18,6 +18,7 @@ class Solution:
             if not cur.next: 
                 break
             ecur = ecur.next        
+        
         cur.next = even_head.next
         
         return head
